@@ -1,0 +1,165 @@
+# Membuat file HTML dan CSS sederhana untuk website layanan pengaduan mahasiswa
+html_content = """
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Pengaduan Mahasiswa - UIN Raden Intan Lampung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png" alt="Logo Senat Mahasiswa" class="logo">
+        <h1>Layanan Pengaduan Mahasiswa</h1>
+        <h2>UIN Raden Intan Lampung - Komisi V Advokasi</h2>
+        <nav>
+            <a href="#pengaduan">Laporkan Sekarang</a>
+            <a href="#konsultasi">Konsultasi</a>
+            <a href="#hak">Hak & Kewajiban</a>
+        </nav>
+    </header>
+
+    <section id="pengaduan">
+        <h3>Form Pengaduan Mahasiswa</h3>
+        <form>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="text" placeholder="NIM" required>
+            <input type="text" placeholder="Fakultas" required>
+            <input type="text" placeholder="Jenis Pengaduan" required>
+            <textarea placeholder="Kronologi Pengaduan" required></textarea>
+            <input type="file" accept="*/*">
+            <button type="submit">Kirim Pengaduan</button>
+        </form>
+    </section>
+
+    <section id="konsultasi">
+        <h3>Form Konsultasi Online</h3>
+        <form>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="text" placeholder="NIM" required>
+            <input type="text" placeholder="Topik Konsultasi" required>
+            <textarea placeholder="Isi Konsultasi" required></textarea>
+            <button type="submit">Kirim Konsultasi</button>
+        </form>
+    </section>
+
+    <section id="hak">
+        <h3>Hak & Kewajiban Mahasiswa</h3>
+        <div class="hak-kewajiban">
+            <h4>Hak Mahasiswa</h4>
+            <ul>
+                <li>Mendapatkan pendidikan berkualitas</li>
+                <li>Layanan akademik & administratif yang adil</li>
+                <li>Mengembangkan potensi, bakat, dan minat</li>
+                <li>Menyalurkan aspirasi secara konstruktif</li>
+                <li>Perlindungan dari diskriminasi dan tekanan</li>
+                <li>Kesehatan dan kenyamanan saat studi</li>
+            </ul>
+            <h4>Kewajiban Mahasiswa</h4>
+            <ul>
+                <li>Menjaga nama baik almamater</li>
+                <li>Aktif dan disiplin dalam kegiatan akademik</li>
+                <li>Menaati peraturan kampus</li>
+                <li>Menghormati semua sivitas akademika</li>
+                <li>Menjaga fasilitas dan lingkungan kampus</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="profil">
+        <h3>Profil Komisi V Advokasi</h3>
+        <p>Komisi V Advokasi adalah wadah untuk menyampaikan dan menyalurkan aspirasi mahasiswa kepada pihak terkait. Komisi ini berperan sebagai penghubung antara mahasiswa dan birokrasi kampus dalam mewujudkan keadilan dan transparansi dalam kehidupan kampus.</p>
+        <p>Komisi V berada di bawah naungan Senat Mahasiswa Universitas Islam Negeri Raden Intan Lampung, dan dikelola oleh anggota Komisi V yang fokus pada isu advokasi dan pembelaan hak-hak mahasiswa.</p>
+    </section>
+
+    <section id="kontak">
+        <h3>Kontak yang Bisa Dihubungi</h3>
+        <ul>
+            <li><strong>Nasirudin Firdaus</strong> - 082177761212</li>
+            <li><strong>Ahmad Satria Wijaya</strong> - 083181695062</li>
+            <li><strong>Salman Fakhrie Asyafi</strong> - 089652913082</li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Komisi V Advokasi - Senat Mahasiswa UIN Raden Intan Lampung</p>
+    </footer>
+</body>
+</html>
+"""
+
+css_content = """
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.header {
+    background-color: #004d00;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form input, form textarea {
+    background-color: #111;
+    color: #fff;
+}
+
+form button {
+    background-color: #00cc00;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hak-kewajiban ul {
+    list-style: square;
+    padding-left: 40px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #111;
+    padding: 10px;
+    font-size: 14px;
+}
+"""
+
+# Simpan file HTML dan CSS
+with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+with open("/mnt/data/style.css", "w", encoding="utf-8") as f:
+    f.write(css_content)
+
+"/mnt/data/index.html dan style.css berhasil dibuat."
